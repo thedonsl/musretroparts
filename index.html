@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musa Retro Parts | 武佐 - Classic Japanese Car Parts (1990s & Before)</title>
+  <meta name="description" content="Authentic genuine OEM, NOS, and restored parts for classic Japanese cars from the 1960s to 1990s. Datsun/Nissan, Honda, Mazda, Suzuki, Toyota.">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Serif+JP:wght@600;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR / HEADER -->
+  <header class="navbar">
+    <div class="brand-container" onclick="navigateTo('home')" style="cursor: pointer;">
+      <div class="brand-kanji-badge">武佐</div>
+      <div class="brand-text">
+        <div class="brand-title">MUSA <span>RETRO PARTS</span></div>
+        <div class="brand-subtitle">
+          <span class="kanji-meaning-tag">武佐 = Spare Parts Warrior</span>
+          <span>Classic JDM 1960–1999</span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-view="home" onclick="navigateTo('home')"><i class="fas fa-home"></i> Home</a></li>
+      <li><a class="nav-link active" data-view="shop" onclick="navigateTo('shop')"><i class="fas fa-store"></i> Parts Catalog</a></li>
+      <li><a class="nav-link" data-view="about" onclick="navigateTo('about')"><i class="fas fa-torii-gate"></i> About Us</a></li>
+      <li><a class="nav-link" data-view="contact" onclick="navigateTo('contact')"><i class="fas fa-envelope"></i> Contact & Sourcing</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="search-bar-wrap">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search Part #, 4AGE, RB26, L28...">
+      </div>
+
+      <button class="cart-btn" onclick="toggleCartDrawer(true)" title="Shopping Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cart-badge-count">0</span>
+      </button>
+
+      <button class="admin-nav-btn" onclick="navigateTo('admin')">
+        <i class="fas fa-cog"></i> Admin Portal
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       VIEW 1: HOME PAGE
+       ========================================================================== -->
+  <main id="view-home" class="page-view">
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="hero-kanji-bg">武佐</div>
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-certificate"></i> Genuine Japanese Automotive Heritage
+        </div>
+        <h1 class="hero-title">
+          The <span>Spare Parts Warrior</span> for Classic JDM Legends
+        </h1>
+        <p class="hero-desc">
+          Musa (武佐) represents the <em>"Spare Parts Warrior"</em>. We dedicate ourselves to sourcing, restoring, and supplying hard-to-find NOS, OEM, and performance parts for Japanese icons from the 1960s through 1999.
+        </p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" onclick="navigateTo('shop')">
+            <i class="fas fa-compass"></i> Explore Parts Shop
+          </button>
+          <button class="btn-secondary" onclick="navigateTo('about')">
+            <i class="fas fa-scroll"></i> Our Heritage & Story
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width: 1600px; margin: 3rem auto; padding: 0 2rem;">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Supported Manufacturers</span>
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">Featured Classic Car Makes</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+        <div class="part-card" style="padding: 1.5rem; text-align: center; cursor: pointer;" onclick="state.selectedMakeId='datsun_nissan'; navigateTo('shop');">
+          <i class="fas fa-car" style="font-size: 2.5rem; color: var(--accent-red); margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Datsun / Nissan</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">240Z, 280ZX, Skyline GT-R R32/R33, Silvia S13, 300ZX</p>
+        </div>
+
+        <div class="part-card" style="padding: 1.5rem; text-align: center; cursor: pointer;" onclick="state.selectedMakeId='honda'; navigateTo('shop');">
+          <i class="fas fa-car-side" style="font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Honda</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">NSX NA1, Civic EF/EG/EK9, CR-X, Integra DC2</p>
+        </div>
+
+        <div class="part-card" style="padding: 1.5rem; text-align: center; cursor: pointer;" onclick="state.selectedMakeId='mazda'; navigateTo('shop');">
+          <i class="fas fa-circle-notch" style="font-size: 2.5rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Mazda</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">RX-7 FB, FC3S Turbo II, FD3S Twin Turbo, Miata NA</p>
+        </div>
+
+        <div class="part-card" style="padding: 1.5rem; text-align: center; cursor: pointer;" onclick="state.selectedMakeId='suzuki'; navigateTo('shop');">
+          <i class="fas fa-bolt" style="font-size: 2.5rem; color: #10b981; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Suzuki</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">Cappuccino EA11R/21R, Jimny JA11/JA12, Swift GTi</p>
+        </div>
+
+        <div class="part-card" style="padding: 1.5rem; text-align: center; cursor: pointer;" onclick="state.selectedMakeId='toyota'; navigateTo('shop');">
+          <i class="fas fa-crown" style="font-size: 2.5rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+          <h3 style="font-size: 1.3rem; margin-bottom: 0.4rem;">Toyota</h3>
+          <p style="font-size: 0.82rem; color: var(--text-muted);">AE86 Levin/Trueno, Supra MK3/MK4, MR2, Celica GT-Four</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rare Parts Banner -->
+    <section style="background: var(--bg-card); border-y: 1px solid var(--border-subtle); padding: 4rem 2rem;">
+      <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <span style="color: var(--accent-red); font-weight: 700; text-transform: uppercase;">Direct Tokyo & Osaka Network</span>
+          <h2 style="font-size: 2.4rem; font-weight: 800; color: #fff; margin: 0.5rem 0 1rem 0;">Need a rare part not in our online catalog?</h2>
+          <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1.5rem;">
+            Our team in Japan maintains direct contacts with NOS warehouses, private Japanese vintage collectors, and specialty machine shops across Tokyo, Nagoya, and Osaka.
+          </p>
+          <button class="btn-primary" onclick="navigateTo('contact')">
+            <i class="fas fa-paper-plane"></i> Submit Rare Part Request
+          </button>
+        </div>
+        <div style="text-align: center;">
+          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80" alt="Datsun Carburetor" style="width: 100%; max-width: 500px; border-radius: var(--radius-lg); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-glow);">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 2: SHOP CATALOG (WITH LEFT HAND MENU HIERARCHY)
+       ========================================================================== -->
+  <main id="view-shop" class="page-view active">
+    <div class="app-container">
+      <div class="shop-layout">
+        
+        <!-- LEFT HAND MENU: MAKES, MODELS & YEARS HIERARCHY -->
+        <aside class="sidebar-panel">
+          <div class="sidebar-header">
+            <div class="sidebar-title">
+              <i class="fas fa-filter"></i> Vehicle Selector
+            </div>
+            <button class="reset-filter-btn" onclick="resetFilters()">Reset All</button>
+          </div>
+
+          <p style="font-size: 0.78rem; color: var(--text-dim); margin-bottom: 1rem;">
+            Select Make &bull; Model &bull; Year underneath to filter compatible parts:
+          </p>
+
+          <!-- Hierarchical Car Menu (Accordion Tree) -->
+          <ul class="vehicle-tree" id="vehicle-tree-container">
+            <!-- Rendered by JavaScript dynamically -->
+          </ul>
+
+          <!-- Category Filter Section -->
+          <div class="sidebar-section">
+            <div class="section-label">Category Filter</div>
+            <div class="category-list">
+              <button class="category-btn active" onclick="state.selectedCategory='all'; renderShopCatalog(); renderActiveBreadcrumbs();">
+                <i class="fas fa-th-large"></i> All Categories
+              </button>
+              <button class="category-btn" onclick="state.selectedCategory='engine'; renderShopCatalog(); renderActiveBreadcrumbs();">
+                <i class="fas fa-cogs"></i> Engine & Drivetrain
+              </button>
+              <button class="category-btn" onclick="state.selectedCategory='interior'; renderShopCatalog(); renderActiveBreadcrumbs();">
+                <i class="fas fa-tachometer-alt"></i> Interior & Gauges
+              </button>
+              <button class="category-btn" onclick="state.selectedCategory='exterior'; renderShopCatalog(); renderActiveBreadcrumbs();">
+                <i class="fas fa-car-battery"></i> Exterior & Body Work
+              </button>
+              <button class="category-btn" onclick="state.selectedCategory='suspension'; renderShopCatalog(); renderActiveBreadcrumbs();">
+                <i class="fas fa-tools"></i> Suspension & Brakes
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN PARTS CATALOG -->
+        <section>
+          <div class="catalog-header">
+            <div id="active-filters-bar" class="active-filter-breadcrumbs">
+              <!-- Active pills inserted dynamically -->
+            </div>
+
+            <div class="catalog-actions">
+              <span id="catalog-count-badge" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted);">8 Parts Available</span>
+              <select id="catalog-sort-select" class="sort-select">
+                <option value="featured">Sort by: Featured</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Catalog Parts Grid -->
+          <div id="parts-catalog-grid" class="parts-grid">
+            <!-- Cards rendered dynamically -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 3: ABOUT US (STORY OF 武佐 MUSA)
+       ========================================================================== -->
+  <main id="view-about" class="page-view">
+    <div class="app-container">
+      <div class="story-container">
+        <div class="story-hero">
+          <div class="story-kanji-big">武佐</div>
+          <h1 style="font-size: 2.5rem; font-weight: 800; color: #fff; margin-top: 0.5rem;">
+            The Legend of Musa: Spare Parts Warrior
+          </h1>
+          <p style="color: var(--accent-gold); font-weight: 600; font-size: 1.1rem; margin-top: 0.3rem;">
+            Preserving Japanese Classic Cars from the Golden Era (1960s – 1990s)
+          </p>
+        </div>
+
+        <div class="admin-panel-card" style="line-height: 1.8; font-size: 1.05rem; color: var(--text-muted);">
+          <h2 style="color: #fff; margin-bottom: 1rem;">What does 武佐 (Musa) mean?</h2>
+          <p style="margin-bottom: 1.5rem;">
+            In Japanese kanji, <strong>武 (Mu)</strong> signifies martial warrior power and automotive performance, while <strong>佐 (Sa)</strong> signifies assistance, support, and essential supply. Joined together, <strong>武佐 (Musa)</strong> stands for the <em>"Spare Parts Warrior"</em>.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            Just as samurai relied on dedicated master armorers to forge and keep their battle gear sharp, classic Japanese sports cars—the iconic Fairlady Zs, Skylines, RX-7s, AE86s, and NSXs—rely on the Spare Parts Warrior to supply authentic components and keep them roaring on roads around the globe.
+          </p>
+          
+          <hr style="border: none; border-top: 1px solid var(--border-subtle); margin: 2rem 0;">
+
+          <h3 style="color: #fff; margin-bottom: 1rem;">Our Authenticity Pledge</h3>
+          <ul style="list-style: none; display: grid; gap: 1rem;">
+            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+              <i class="fas fa-check-circle" style="color: var(--accent-red); font-size: 1.3rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="color: #fff;">100% Genuine OEM & NOS Verification</strong>
+                <p style="font-size: 0.9rem;">Every part is inspected by hand in Japan with part numbers verified against factory microfiche.</p>
+              </div>
+            </li>
+            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+              <i class="fas fa-check-circle" style="color: var(--accent-gold); font-size: 1.3rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="color: #fff;">Worldwide Express Shipping with PayPal Buyer Protection</strong>
+                <p style="font-size: 0.9rem;">All shipments are double-boxed in reinforced wooden or padded crates with door-to-door tracking.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 4: CONTACT US & RARE PART SOURCING
+       ========================================================================== -->
+  <main id="view-contact" class="page-view">
+    <div class="app-container">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h1 style="font-size: 2.6rem; font-weight: 800; color: #fff;">Contact & Part Sourcing Hub</h1>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">Reach our global customer support or request rare NOS parts directly from Japan</p>
+        </div>
+
+        <div class="contact-card-grid">
+          <!-- Inquiry Form -->
+          <div class="admin-panel-card">
+            <h3 style="color: #fff; margin-bottom: 1.2rem;"><i class="fas fa-paper-plane" style="color: var(--accent-red);"></i> Send Us an Inquiry</h3>
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to 武佐 Musa customer care.');">
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label>Your Name:</label>
+                <input type="text" class="form-control" placeholder="e.g. Kenji Takahashi" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label>Email Address:</label>
+                <input type="email" class="form-control" placeholder="name@domain.com" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 1rem;">
+                <label>Vehicle Model & Year:</label>
+                <input type="text" class="form-control" placeholder="e.g. 1972 Datsun 240Z (S30)" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label>Message / Needed Part OEM #:</label>
+                <textarea class="form-control" rows="4" placeholder="Describe the part you are searching for or your inquiry..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%;">
+                Submit Request
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Details -->
+          <div class="admin-panel-card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <h3 style="color: #fff; margin-bottom: 1.2rem;"><i class="fas fa-map-marker-alt" style="color: var(--accent-gold);"></i> Tokyo Sourcing Office</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                Musa Retro Parts Japan Ltd.<br>
+                2-14-8 Akihabara, Chiyoda-ku<br>
+                Tokyo 101-0021, Japan
+              </p>
+
+              <h4 style="color: #fff; margin-bottom: 0.5rem;">Operating Hours</h4>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Monday &ndash; Friday: 09:00 &ndash; 19:00 JST<br>
+                Saturday: 10:00 &ndash; 16:00 JST
+              </p>
+
+              <h4 style="color: #fff; margin-bottom: 0.5rem;">Accepted Payments</h4>
+              <div style="display:flex; gap: 1rem; font-size: 1.8rem; color: var(--accent-gold); margin-top: 0.5rem;">
+                <i class="fab fa-cc-paypal" title="PayPal Instant Checkout"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       VIEW 5: SEPARATE ADMIN MANAGEMENT PAGE
+       ========================================================================== -->
+  <main id="view-admin" class="page-view">
+    <div class="app-container">
+      <div class="admin-header-bar">
+        <div>
+          <h1 style="font-size: 2rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 0.6rem;">
+            <i class="fas fa-user-shield" style="color: var(--accent-gold);"></i> Musa Store Administration
+          </h1>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Manage Car Makes, Models, Years, and Attached Inventory</p>
+        </div>
+        <button class="btn-secondary" onclick="navigateTo('shop')">
+          <i class="fas fa-store"></i> Back to Store
+        </button>
+      </div>
+
+      <!-- Stats Summary -->
+      <div id="admin-stats-grid" class="admin-stats-grid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Admin Tabs -->
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" data-tab="parts" onclick="setAdminTab('parts')">
+          <i class="fas fa-boxes"></i> Parts Catalog Manager
+        </button>
+        <button class="admin-tab-btn" data-tab="makes" onclick="setAdminTab('makes')">
+          <i class="fas fa-car"></i> Manage Makes
+        </button>
+        <button class="admin-tab-btn" data-tab="models" onclick="setAdminTab('models')">
+          <i class="fas fa-sitemap"></i> Manage Models & Years
+        </button>
+      </div>
+
+      <!-- Dynamic Tab Content -->
+      <div id="admin-tab-content">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL 1: PRODUCT DETAILS & GALLERY MODAL
+       ========================================================================== -->
+  <div id="product-modal" class="modal-overlay" onclick="if(event.target===this) closeModal();">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div id="modal-body-content">
+        <!-- Inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: PAYPAL SMART SANDBOX CHECKOUT MODAL
+       ========================================================================== -->
+  <div id="paypal-modal" class="modal-overlay" onclick="if(event.target===this) closePayPalModal();">
+    <div class="modal-content" style="max-width: 500px; padding: 2rem;">
+      <button class="modal-close-btn" onclick="closePayPalModal()"><i class="fas fa-times"></i></button>
+      <div id="paypal-checkout-container">
+        <!-- Inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SLIDE-OUT CART DRAWER
+       ========================================================================== -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 style="color:#fff; font-size: 1.2rem; display:flex; align-items:center; gap:0.5rem;">
+        <i class="fas fa-shopping-cart" style="color: var(--accent-red);"></i> Shopping Cart
+      </h3>
+      <button onclick="toggleCartDrawer(false)" style="color: var(--text-muted);"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div id="cart-items-container" class="cart-items-list">
+      <!-- Items inserted dynamically -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary-row total">
+        <span>Cart Total:</span>
+        <span id="cart-total-amount">$0.00</span>
+      </div>
+      <div style="font-size: 0.78rem; color: var(--text-dim); margin-top: 0.3rem; display:flex; align-items:center; gap: 0.4rem;">
+        <i class="fas fa-lock" style="color:#10b981;"></i> Guaranteed PayPal Buyer Protection Enabled
+      </div>
+
+      <div class="paypal-btn-wrap">
+        <button class="btn-paypal" onclick="initiatePayPalCheckout()">
+          <i class="fab fa-paypal"></i> Checkout with PayPal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic JS -->
+  <script src="app.js"></script>
+</body>
+</html>

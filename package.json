@@ -1,0 +1,25 @@
+{
+  "name": "musa-retro-parts",
+  "version": "1.0.0",
+  "description": "Musa Retro Parts (武佐) - Spare Parts Warrior for Classic Japanese Cars (1960s-1990s)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Static production assets ready in root directory!'"
+  },
+  "keywords": [
+    "jdm",
+    "datsun",
+    "nissan",
+    "honda",
+    "mazda",
+    "suzuki",
+    "toyota",
+    "classic-cars",
+    "paypal-integration",
+    "retro-parts"
+  ],
+  "author": "Musa Retro Parts Ltd.",
+  "license": "MIT"
+}
