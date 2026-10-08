@@ -69,9 +69,8 @@ const DEFAULT_PARTS = [
     condition: 'OEM Restored',
     description: 'Authentic restored Triple Weber 45 DCOE carburetors with high-velocity stacks and polished manifold for Datsun 240Z, 260Z, and 280Z L-series engines. Fully recalibrated and flow-tested.',
     images: [
-      'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
-      'images/datsun_weber_carb_1791415697618.jpg'
+      'https://images.unsplash.com/photo-1698180830151-58df39322115?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1626668011687-8a114cf5a34c?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -88,8 +87,8 @@ const DEFAULT_PARTS = [
     condition: 'Rare NOS',
     description: 'Ultra rare New Old Stock (NOS) Nismo white instrument gauge cluster for Nissan Skyline GT-R R32 BNR32. 320 km/h speedometer with 10,000 RPM tachometer.',
     images: [
-      'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80',
-      'images/nismo_gtr_cluster_1791415708381.jpg'
+      'https://images.unsplash.com/photo-1601488674014-aea2be68ebe7?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1632245889029-e406faaa34cd?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -106,8 +105,8 @@ const DEFAULT_PARTS = [
     condition: 'NOS Boxed',
     description: 'Original Toyota Racing Development (TRD) wrinkle red valve cover for 4A-GE 16V engines fitted in Corolla Levin and Sprinter Trueno AE86 models. Includes original gasket kit.',
     images: [
-      'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -124,8 +123,8 @@ const DEFAULT_PARTS = [
     condition: 'OEM Restored',
     description: 'Hitachi HT12 sequential twin turbocharger set for Mazda RX-7 FD3S 13B-REW rotary engine. Fully overhauled with upgraded 360-degree thrust bearings.',
     images: [
-      'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -142,7 +141,8 @@ const DEFAULT_PARTS = [
     condition: 'OEM Original',
     description: 'Factory original Honda NSX NA1 polished titanium shift knob with authentic black leather shift boot and red stitching.',
     images: [
-      'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1651913166649-43666d6d84a7?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1560270034-7a13d74c0e6f?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -159,7 +159,8 @@ const DEFAULT_PARTS = [
     condition: 'JDM Performance',
     description: 'High-flow aluminum intercooler unit with polished piping designed specifically for Suzuki Cappuccino EA11R F6A turbo Kei car.',
     images: [
-      'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1494976388531-d1058494ceb8?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -176,7 +177,8 @@ const DEFAULT_PARTS = [
     condition: 'NOS Boxed',
     description: 'Genuine Toyota JZA80 Supra Euro glass headlights. Eliminates yellowing plastic housings; clean glass lenses with inner chrome bezels.',
     images: [
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1626668011687-8a114cf5a34c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1611651338412-8403fa6e3599?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
@@ -193,7 +195,8 @@ const DEFAULT_PARTS = [
     condition: 'OEM Vintage',
     description: 'Iconic Fairlady Z competition steering wheel featuring real wood/leather finish and original Z emblem horn button.',
     images: [
-      'https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1626668011687-8a114cf5a34c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80'
     ]
   }
 ];
